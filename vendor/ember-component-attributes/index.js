@@ -11,11 +11,7 @@
         for (let i = 0; i < attributes.length; i++) {
           let attribute = attributes[i];
 
-          if (attribute === "class") {
-            debugger;
-          } else {
-            attributeBindingsOverride.push(`__HTML_ATTRIBUTES__.${attribute}:${attribute}`);
-          }
+          attributeBindingsOverride.push(`__HTML_ATTRIBUTES__.${attribute}:${attribute}`);
         }
 
         if (this.attributeBindings) {
