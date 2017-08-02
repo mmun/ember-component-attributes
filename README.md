@@ -4,6 +4,12 @@
 This addon lets you easily bind attributes to your ember components.
 It was inspired by the discussion in [this rfc](https://github.com/emberjs/rfcs/pull/242).
 
+## Installation
+
+```
+ember install ember-component-attributes
+```
+
 ## Usage
 
 To bind an attribute `foo` to the value of `bar`, pass `(attributes foo=bar)` as the last positional argument to your component:
@@ -37,26 +43,3 @@ This addon is implemented with a naive Glimmer AST transform so you can't do fan
 ```
 
 If this feature is accepted into the Ember core then we will consider removing this limitation.
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd ember-component-attributes`
-* `npm install`
-
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
