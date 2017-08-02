@@ -4,7 +4,7 @@
 
   Component.reopen({
     __HTML_ATTRIBUTES__: computed({
-      set: function(key, value) {
+      set(key, value) {
         let attributes = Object.keys(value);
         let customBindings = [];
 
@@ -14,7 +14,7 @@
         }
 
         if (this.attributeBindings) {
-          this.attributeBindings = this.attributeBindings.concat(customBindings);
+          this.attributeBindings = customBindings.concat(this.attributeBindings);
         } else {
           this.attributeBindings = customBindings;
         }
@@ -23,5 +23,4 @@
       }
     })
   });
-
 })();
