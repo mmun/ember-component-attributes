@@ -12,5 +12,21 @@ module.exports = {
         return __dirname;
       }
     });
-  }
+  },
+
+  included() {
+    this.import('vendor/ember-component-attributes/index.js');
+  },
+
+  treeForVendor(rawVendorTree) {
+    let babelAddon = this.addons.find(addon => addon.name === 'ember-cli-babel');
+
+    let transpiledVendorTree = babelAddon.transpileTree(rawVendorTree, {
+      'ember-cli-babel': {
+        compileModules: false
+      }
+    });
+
+    return transpiledVendorTree;
+  },
 };
