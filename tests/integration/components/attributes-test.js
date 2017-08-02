@@ -34,7 +34,7 @@ test("it works when component has existing attributeBindings", function(assert) 
 });
 
 test("it wins over attributeBindings", function(assert) {
-  this.register("component:x-foo", Component.extend({ attributeBindings: ["dataFoo:data-Foo"] }));
+  this.register("component:x-foo", Component.extend({ attributeBindings: ["dataFoo:data-foo"] }));
 
   this.render(hbs`{{x-foo (attributes data-foo="expression") dataFoo="class"}}`);
 
