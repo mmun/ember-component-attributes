@@ -2,7 +2,9 @@
   "name": "ember-component-attributes",
   "version": "0.0.0",
   "description": "Easily bind attributes to your ember components",
-  "keywords": ["ember-addon"],
+  "keywords": [
+    "ember-addon"
+  ],
   "license": "MIT",
   "directories": {
     "doc": "doc",
