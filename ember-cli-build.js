@@ -5,7 +5,14 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
-    // Add options here
+    trees: {
+      // this is dumb, but there is a bug in lib/broccoli/ember-addon.js
+      // which makes the `vendor/` tree used _twice_ during local development
+      // of the addon. once for the dummy app (which isn't getting our custom
+      // treeForVendor treatment) and once for the actual addon which is transpiled
+      // unfortunately, the dummy app's raw/untranspiled version wins
+      vendor: null
+    }
   });
 
   /*
