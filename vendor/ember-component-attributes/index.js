@@ -6,17 +6,22 @@
     __HTML_ATTRIBUTES__: computed({
       set(key, value) {
         let attributes = Object.keys(value);
-        let customBindings = [];
+        let attributeBindingsOverride = [];
 
         for (let i = 0; i < attributes.length; i++) {
           let attribute = attributes[i];
-          customBindings.push(`__HTML_ATTRIBUTES__.${attribute}:${attribute}`);
+
+          if (attribute === "class") {
+            debugger;
+          } else {
+            attributeBindingsOverride.push(`__HTML_ATTRIBUTES__.${attribute}:${attribute}`);
+          }
         }
 
         if (this.attributeBindings) {
-          this.attributeBindings = customBindings.concat(this.attributeBindings);
+          this.attributeBindings = attributeBindingsOverride.concat(this.attributeBindings);
         } else {
-          this.attributeBindings = customBindings;
+          this.attributeBindings = attributeBindingsOverride;
         }
 
         return value;
