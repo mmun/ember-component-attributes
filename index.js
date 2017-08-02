@@ -4,7 +4,7 @@
 module.exports = {
   name: "ember-component-attributes",
 
-  setupPreprocessorRegistry: function(type, registry) {
+  setupPreprocessorRegistry(type, registry) {
     registry.add("htmlbars-ast-plugin", {
       name: "attributes-expression",
       plugin: require("./lib/attributes-expression-transform"),
