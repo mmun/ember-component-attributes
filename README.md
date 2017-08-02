@@ -1,4 +1,5 @@
 # ember-component-attributes
+[![Build Status](https://travis-ci.org/mmun/ember-component-attributes.svg?branch=master)](https://travis-ci.org/mmun/ember-component-attributes)
 
 This addon lets you easily bind attributes to your ember components.
 It was inspired by the discussion in [this rfc](https://github.com/emberjs/rfcs/pull/242).
