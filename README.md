@@ -32,7 +32,7 @@ Attribute bindings defined with the `attributes` helper will always win over att
 This addon is implemented with a naive Glimmer AST transform so you can't do fancy things like
 
 ```hbs
-{{my-component (if foo (attributes data-foo="true") {attributes data-bar="true"})}}
+{{my-component (if foo (attributes data-foo="true") (attributes data-bar="true"))}}
 ```
 
 If this feature is accepted into the Ember core then we will consider removing this limitation.
