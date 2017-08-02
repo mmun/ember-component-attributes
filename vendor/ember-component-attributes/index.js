@@ -13,9 +13,11 @@
           customBindings.push(`__HTML_ATTRIBUTES__.${attribute}:${attribute}`);
         }
 
-        debugger
-
-        this.attributeBindings = this.attributeBindings.concat(customBindings);
+        if (this.attributeBindings) {
+          this.attributeBindings = this.attributeBindings.concat(customBindings);
+        } else {
+          this.attributeBindings = customBindings;
+        }
 
         return value;
       }
