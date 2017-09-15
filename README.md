@@ -34,6 +34,9 @@ Attribute bindings defined with the `attributes` helper will always win over att
 {{x-bar (attributes role="foo") ariaRole="bar"}}
 ```
 
+## Version Support
+The support is guaranteed from version 2.8-lts. It might support older versions as well although the earliest working version is unknown.
+
 ## Limitations
 
 This addon is implemented with a naive Glimmer AST transform so you can't do fancy things like
