@@ -34,8 +34,10 @@ Attribute bindings defined with the `attributes` helper will always win over att
 {{x-bar (attributes role="foo") ariaRole="bar"}}
 ```
 
-## Version Support
-The support is guaranteed from version 2.8-lts. It might support older versions as well although the earliest working version is unknown.
+## Support Versions of Ember
+
+This addon is guaranteed to work with Ember 2.8 and up.
+It may work with older versions as well although the earliest working version is unknown.
 
 ## Limitations
 
