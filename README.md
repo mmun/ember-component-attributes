@@ -34,6 +34,11 @@ Attribute bindings defined with the `attributes` helper will always win over att
 {{x-bar (attributes role="foo") ariaRole="bar"}}
 ```
 
+## Supported Versions of Ember
+
+This addon is guaranteed to work with Ember 2.8 and up.
+It may work with older versions as well although the earliest working version is unknown.
+
 ## Limitations
 
 This addon is implemented with a naive Glimmer AST transform so you can't do fancy things like
