@@ -10,7 +10,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "mmun/ember-component-attributes",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
