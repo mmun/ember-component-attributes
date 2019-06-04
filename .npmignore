@@ -3,6 +3,7 @@
 /dist
 /tests
 /tmp
+/.node_modules.ember-try
 **/.gitkeep
 .bowerrc
 .editorconfig
