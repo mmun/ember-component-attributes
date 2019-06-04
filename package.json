@@ -5,14 +5,15 @@
   "keywords": [
     "ember-addon"
   ],
+  "repository": "mmun/ember-component-attributes",
   "license": "MIT",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "mmun/ember-component-attributes",
   "scripts": {
     "build": "ember build",
+    "release": "release-it",
     "start": "ember server",
     "test": "ember try:each"
   },
@@ -29,7 +30,6 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.0.0",
-    "ember-cli-release": "^1.0.0-beta.2",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^1.2.0",
@@ -38,12 +38,30 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.14.1",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "release-it": "^12.2.1",
+    "release-it-lerna-changelog": "^1.0.3"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md"
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    }
   }
 }
