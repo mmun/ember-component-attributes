@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "mmun/ember-component-attributes",
+  "repository": "https://github.com/mmun/ember-component-attributes",
   "license": "MIT",
   "directories": {
     "doc": "doc",
