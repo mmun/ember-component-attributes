@@ -39,8 +39,8 @@
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.14.1",
     "loader.js": "^4.2.3",
-    "release-it": "^12.2.1",
-    "release-it-lerna-changelog": "^1.0.3"
+    "release-it": "^15.6.0",
+    "release-it-lerna-changelog": "^5.0.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
